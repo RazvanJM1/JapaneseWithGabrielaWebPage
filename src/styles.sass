@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+html, body
+  margin: 0
+  padding: 0
+
+@font-face
+  font-family: Japan
+  src: url('assets/fonts/this.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+
+.japan-text
+  font-family: Japan, sans-serif
+  font-weight: 900
+
+$font-weight: bold
+$gradient-colors: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)
+$text-stroke-color: white
+$text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
+
+@mixin gradient-text($gradient, $stroke-color, $shadow)
+  background: $gradient
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  color: transparent
+  text-shadow: $shadow
+
+.instagram-text
+  font-weight: $font-weight
+  @include gradient-text($gradient-colors, $text-stroke-color, $text-shadow)
+
+@mixin social-text($font-size, $gradient, $stroke-color, $shadow)
+  font-weight: bold
+  @include gradient-text($gradient, $stroke-color, $shadow)
+
+.tiktok-text
+  @include social-text(4rem, linear-gradient(45deg,rgb(243, 243, 243),rgb(5, 5, 5), #ffffff, #000000), white, 2px 2px 5px rgba(0, 0, 0, 0.3))
+
+.facebook-text
+  @include social-text(4rem, linear-gradient(45deg, #1877F2, #4267B2, #385898, #333333), white, 2px 2px 5px rgba(0, 0, 0, 0.3))
+
+.big-text
+  font-family: Poppins, sans-serif
+  font-weight: bold
+  font-size: 3.75rem
+  text-transform: uppercase
+  text-shadow: 2px 2px 4px black
+
+.big-text-white
+  @extend .big-text
+  color: white
+  text-align: center
+
+.big-text-black
+  @extend .big-text
+  color: black
+  text-align: left
+
+.medium-text
+  font-family: Poppins, sans-serif
+  font-size: 1.5rem
+  text-transform: uppercase
+  text-shadow: 2px 2px 4px black
+
+.medium-text-white
+  @extend .medium-text
+  color: white
+  text-align: center
+
+.medium-text-black
+  @extend .medium-text
+  color: black
+  text-align: left
+
+@media screen and (max-width: 1000px)
+  nav
+    display: none !important

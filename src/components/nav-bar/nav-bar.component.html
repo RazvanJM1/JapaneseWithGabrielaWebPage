@@ -1,0 +1,12 @@
+<nav id="nav-bar">
+  <a href=""><img id="logo"
+      [ngStyle]="{ marginLeft: isHomeRoute ? '15vw' : '0', paddingTop: isHomeRoute ? '10vh' : '0'}"
+      src="/assets/logo.png" alt="logo"></a>
+  <ul>
+    <li *ngFor="let link of navLinks">
+      <a [routerLink]="link.routerLink" routerLinkActive="active" [href]="link.href"
+        [routerLinkActiveOptions]="link.routerLinkActiveOptions"
+        [ngStyle]="{color: isHomeRoute ? 'white' : 'inherit'}">{{ link.label }}</a>
+    </li>
+  </ul>
+</nav>

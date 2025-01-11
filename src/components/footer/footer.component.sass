@@ -1,0 +1,38 @@
+:host
+  position: relative
+  bottom: 0
+  left: 0
+  width: 100%
+
+#footer-container
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 10vh
+  border-top: 1px solid black
+  ul
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    width: 60%
+    justify-content: space-around
+    align-items: center
+    padding-right: 10vw
+    li
+      color: black
+      text-decoration: none
+      font-family: Poppins, sans-serif
+      font-weight: bold
+      a
+        text-decoration: none
+
+#footer-logo
+  height: 8vh
+  padding-left: 5vw
+
+@media screen and (max-width: 1000px)
+  #footer-logo
+    padding-left: 0
+  #politica-text
+    display: none

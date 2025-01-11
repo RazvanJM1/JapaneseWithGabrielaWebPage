@@ -1,0 +1,58 @@
+.courses-page
+  width: 100%
+  min-height: 100vh
+  background-image: url("../../assets/courses.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  display: flex
+  justify-content: flex-start
+  flex-direction: column
+
+.cards-container
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+
+.card
+  width: 35vw
+  height: 45vh
+  background-color: #8C0846
+  border-radius: 10px
+  margin: 0 4vw 3vh 4vw
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-direction: column
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  color: #fff
+  font-family: 'Open Sans', sans-serif
+  font-size: 2rem
+  letter-spacing: 1px
+
+.texts-part
+  margin: 5% 10%
+  font-family: 'Arial', sans-serif
+
+@media screen and (max-width: 1200px)
+  .cards-container
+    flex-direction: column
+    align-items: center
+
+  .card
+    width: 80vw
+    height: 30vh
+    margin: 10px
+    font-size: 1.5rem
+
+@media screen and (max-width: 768px)
+  .cards-container
+    flex-direction: column
+    align-items: center
+
+  .card
+    width: 80vw
+    height: 30vh
+    margin: 10px
+    font-size: 1rem
